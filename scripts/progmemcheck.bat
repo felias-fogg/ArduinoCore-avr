@@ -1,12 +1,12 @@
 @echo off
 REM Windows batch file equivalent of progmemcheck.sh
 REM Checks if PROGMEM section is too large (over 65535 bytes)
-REM Usage: progmemcheck.bat <objdump_tool> <object_file>
+REM Usage: progmemcheck.bat <symbol_tool> <object_file>
 
 if "%1"=="" goto usage
 if "%2"=="" goto usage
 
-REM Execute objdump command and extract the address (should be decimal with -t d option)
+REM Execute symbol extraction command (avr-nm) and extract the address (should be decimal with -t d option)
 for /f "tokens=1" %%i in ('%1 -t d %2 ^| findstr "__ctors_start"') do set progmem_end=%%i
 
 REM Check if we got a result
@@ -37,16 +37,18 @@ set line="^| Severe Warning: PROGMEM section too large by %excess% bytes.       
 echo.
 echo _______________________________________________________________
 echo %line:~1,63%^|
-echo ^| Your program will most probably be unstable!                ^|
-echo ^| Use the macros PROGMEM_FAR from ^<progmem_far.h^> and         ^|
-echo ^| pgm_get_far_address/pgm_read_xxxx_far from ^<avr/pgmspace.h^>.^|
+echo ^| Your program will most probably be unstable! Use the macro  ^|
+echo ^| PROGMEM_FAR from the "progmem_far" library (available from  ^| 
+echo ^| Arduino Library Manager), and use pgm_get_far_address and   ^|
+echo ^| pgm_read_xxxx_far from Arduino's "pgmspace" library to      ^|
+echo ^| access the PROGMEM_FAR data.                                ^|
 echo ^|_____________________________________________________________^|
 echo.
 goto end
 
 :usage
-echo Usage: %0 ^<objdump_tool^> ^<object_file^>
-echo Example: %0 avr-objdump firmware.elf
+echo Usage: %0 ^<symbol_tool^> ^<object_file^>
+echo Example: %0 avr-nm firmware.elf
 exit /b 1
 
 :end
