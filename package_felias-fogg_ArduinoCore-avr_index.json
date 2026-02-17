@@ -10,7 +10,7 @@
       },
       "platforms": [
         {
-          "name": "ArduinoCore-avr",
+          "name": "Arduino AVR Boards (Debug enabled)",
           "architecture": "avr",
           "version": "1.9.0-pre1",
           "category": "Contributed",
