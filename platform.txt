@@ -6,8 +6,8 @@
 # https://arduino.github.io/arduino-cli/latest/platform-specification/
 # https://felias-fogg.github.io/PyAvrOCD/
 
-name=Arduino AVR Boards
-version=1.8.7
+name=Arduino AVR Boards (Debug enabled)
+version=1.9.0-pre1
 
 # AVR compile variables
 # ---------------------
