@@ -83,7 +83,7 @@ jq -r                                    \
 --arg file_name   $REPOSITORY-${DOWNLOADED_FILE#"v"}.tar.bz2  \
 '.packages[].platforms[.packages[].platforms | length] |= . +
 {
-  "name": "Arduino AVR Boards (Debug enabled),
+  "name": "Arduino AVR Boards (Debug enabled)",
   "architecture": "avr",
   "version": $version,
   "category": "Contributed",
