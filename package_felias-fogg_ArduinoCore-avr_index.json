@@ -134,8 +134,8 @@
           "category": "Contributed",
           "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.9.0-pre2.tar.bz2",
           "archiveFileName": "ArduinoCore-avr-1.9.0-pre2.tar.bz2",
-          "checksum": "SHA-256:cc0923417b49cfe1d8e8624c4a9bda6f7fd6ded9cf506589125a026b642083d3",
-          "size": "7261666",
+          "checksum": "SHA-256:f6b24e80675a44f59853395fe846d7520aebce7f54feb2ade3faad406bdb91ce",
+          "size": "7261111",
           "help": {
             "online": "https://pyavrocd.io"
           },
