@@ -184,7 +184,7 @@ jq -r                                    \
       "version": "7.3.0-atmel3.6.1-arduino7"
     },
     {
-      "packager": "MightyCore",
+      "packager": "arduino",
       "name": "avrdude",
       "version": "8.0.0-arduino1"
     },
@@ -194,7 +194,7 @@ jq -r                                    \
       "version": "1.3.0"
     },
     {
-      "packager": "ArduinoCore-avr",
+      "packager": "arduino",
       "name": "avrocd-tools",
       "version": $avrocdversion
     }   
