@@ -244,6 +244,124 @@
               "version": "1.4.0"
             }
           ]
+        },
+        {
+          "name": "Arduino AVR Boards (GCC15)",
+          "architecture": "avr",
+          "version": "1.10.0-gcc15a",
+          "category": "Contributed",
+          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.10.0-gcc15a.tar.bz2",
+          "archiveFileName": "ArduinoCore-avr-1.10.0-gcc15a.tar.bz2",
+          "checksum": "SHA-256:8a9282cf775a76f92391012371c2c412ec43e8129842aa1f111fa54f961b8c1e",
+          "size": "7260176",
+          "help": {
+            "online": "https://pyavrocd.io"
+          },
+          "boards": [
+            {
+              "name": "Arduino Yún"
+            },
+            {
+              "name": "Arduino UNO"
+            },
+            {
+              "name": "Arduino UNO Mini"
+            },
+            {
+              "name": "Arduino UNO WiFi"
+            },
+            {
+              "name": "Arduino Diecimila"
+            },
+            {
+              "name": "Arduino Nano"
+            },
+            {
+              "name": "Arduino Mega"
+            },
+            {
+              "name": "Arduino Mega ADK"
+            },
+            {
+              "name": "Arduino Leonardo"
+            },
+            {
+              "name": "Arduino Leonardo Ethernet"
+            },
+            {
+              "name": "Arduino Micro"
+            },
+            {
+              "name": "Arduino Esplora"
+            },
+            {
+              "name": "Arduino Mini"
+            },
+            {
+              "name": "Arduino Ethernet"
+            },
+            {
+              "name": "Arduino Fio"
+            },
+            {
+              "name": "Arduino BT"
+            },
+            {
+              "name": "Arduino LilyPad USB"
+            },
+            {
+              "name": "Arduino LilyPad"
+            },
+            {
+              "name": "Arduino Pro"
+            },
+            {
+              "name": "Arduino ATMegaNG"
+            },
+            {
+              "name": "Arduino Robot Control"
+            },
+            {
+              "name": "Arduino Robot Motor"
+            },
+            {
+              "name": "Arduino Gemma"
+            },
+            {
+              "name": "Adafruit Circuit Playground"
+            },
+            {
+              "name": "Arduino Yún Mini"
+            },
+            {
+              "name": "Arduino Industrial 101"
+            },
+            {
+              "name": "Linino One"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "15.1.0-microchip4.0.0-01"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "8.0.0-arduino1"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.3.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrocd-tools",
+              "version": "1.5.2"
+            }
+          ]
         }
       ],
       "tools": [
