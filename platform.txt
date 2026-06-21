@@ -5,16 +5,16 @@
 # For more info:
 # https://arduino.github.io/arduino-cli/latest/platform-specification/
 
-name=Arduino AVR Boards (Debug enabled)
-version=1.9.0-pre2
+name=Arduino AVR Boards (GCC15)
+version=1.10.0-gcc15a
 
 # AVR compile variables
 # ---------------------
 
 # Optimization flags for debugging
-compiler.optimization_flags=-Os-ggdb3  -DNDEBUG -flto
-compiler.optimization_flags.release=-Os -ggdb3 -DNDEBUG -flto
-compiler.optimization_flags.debug=-Og -ggdb3 -DDEBUG -fno-lto
+compiler.optimization_flags=-Os -ggdb3  -DNDEBUG -flto -mrelax
+compiler.optimization_flags.release=-Os -ggdb3 -DNDEBUG -flto -mrelax
+compiler.optimization_flags.debug=-Og -ggdb3 -DDEBUG -flto
 
 # Warnings
 compiler.warning_flags=-w
@@ -168,10 +168,8 @@ debug.cortex-debug.custom.serverArgs.4=--manage
 debug.cortex-debug.custom.serverArgs.5=all
 debug.cortex-debug.custom.serverArgs.6=--F_CPU
 debug.cortex-debug.custom.serverArgs.7={build.f_cpu}
-debug.cortex-debug.custom.serverArgs.8=--elf-file
-debug.cortex-debug.custom.serverArgs.9={debug.executable}
-debug.cortex-debug.custom.serverArgs.10=--prog-clock
-debug.cortex-debug.custom.serverArgs.11=2000
+debug.cortex-debug.custom.serverArgs.8=--prog-clock
+debug.cortex-debug.custom.serverArgs.9=2000
 debug.cortex-debug.custom.preLaunchCommands.0=monitor debugwire enable
 debug.cortex-debug.custom.runToEntryPoint=main
 debug.svd_file={debug.toolchain.path}/pyavrocd-util/svd/{build.mcu}.svd
