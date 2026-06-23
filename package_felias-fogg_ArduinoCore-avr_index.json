@@ -366,12 +366,12 @@
         {
           "name": "Arduino AVR Boards (GCC15)",
           "architecture": "avr",
-          "version": "1.10.0-gcc15b",
+          "version": "1.10.0-gcc15c",
           "category": "Contributed",
-          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.10.0-gcc15b.tar.bz2",
-          "archiveFileName": "ArduinoCore-avr-1.10.0-gcc15b.tar.bz2",
-          "checksum": "SHA-256:22340b2328548ab34b800a0b8122f6d7d2964a60d287625dcc1829a236d9fe91",
-          "size": "7259753",
+          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.10.0-gcc15c.tar.bz2",
+          "archiveFileName": "ArduinoCore-avr-1.10.0-gcc15c.tar.bz2",
+          "checksum": "SHA-256:f1da61cfb3dab8fe055d0e140f4dca941bc37b60da4935d798e1c78f1b58ad6d",
+          "size": "7256092",
           "help": {
             "online": "https://pyavrocd.io"
           },
