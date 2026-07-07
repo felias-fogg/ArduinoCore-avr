@@ -480,6 +480,124 @@
               "version": "1.5.2"
             }
           ]
+        },
+        {
+          "name": "Arduino AVR Boards",
+          "architecture": "avr",
+          "version": "1.11.0-pre1",
+          "category": "Contributed",
+          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.11.0-pre1.tar.bz2",
+          "archiveFileName": "ArduinoCore-avr-1.11.0-pre1.tar.bz2",
+          "checksum": "SHA-256:7665dded5189bf19be7064d963480c3779ab14fdb4a74a624e2a6ccd7d283845",
+          "size": "7249797",
+          "help": {
+            "online": "https://pyavrocd.io"
+          },
+          "boards": [
+            {
+              "name": "Arduino Yún"
+            },
+            {
+              "name": "Arduino UNO"
+            },
+            {
+              "name": "Arduino UNO Mini"
+            },
+            {
+              "name": "Arduino UNO WiFi"
+            },
+            {
+              "name": "Arduino Diecimila"
+            },
+            {
+              "name": "Arduino Nano"
+            },
+            {
+              "name": "Arduino Mega"
+            },
+            {
+              "name": "Arduino Mega ADK"
+            },
+            {
+              "name": "Arduino Leonardo"
+            },
+            {
+              "name": "Arduino Leonardo Ethernet"
+            },
+            {
+              "name": "Arduino Micro"
+            },
+            {
+              "name": "Arduino Esplora"
+            },
+            {
+              "name": "Arduino Mini"
+            },
+            {
+              "name": "Arduino Ethernet"
+            },
+            {
+              "name": "Arduino Fio"
+            },
+            {
+              "name": "Arduino BT"
+            },
+            {
+              "name": "Arduino LilyPad USB"
+            },
+            {
+              "name": "Arduino LilyPad"
+            },
+            {
+              "name": "Arduino Pro"
+            },
+            {
+              "name": "Arduino ATMegaNG"
+            },
+            {
+              "name": "Arduino Robot Control"
+            },
+            {
+              "name": "Arduino Robot Motor"
+            },
+            {
+              "name": "Arduino Gemma"
+            },
+            {
+              "name": "Adafruit Circuit Playground"
+            },
+            {
+              "name": "Arduino Yún Mini"
+            },
+            {
+              "name": "Arduino Industrial 101"
+            },
+            {
+              "name": "Linino One"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "7.3.0-atmel3.6.1-arduino7"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "8.0.0-arduino1"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.3.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrocd-tools",
+              "version": "1.5.5"
+            }
+          ]
         }
       ],
       "tools": [
@@ -899,6 +1017,68 @@
               "host": "i686-mingw32",
               "archiveFileName": "avrocd-tools-1.5.2-i686-mingw32.tar.gz",
               "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.2/avrocd-tools-1.5.2-i686-mingw32.tar.gz"
+            }
+          ]
+        },
+        {
+          "name": "avrocd-tools",
+          "version": "1.5.5",
+          "systems": [
+            {
+              "size": "1269",
+              "checksum": "SHA-256:2c68b32eedf1b763a27186bd0eb97667a2feb673e31a8af4218221b13382b18c",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "avrocd-tools-1.5.5-arm-linux-gnueabihf.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-arm-linux-gnueabihf.tar.gz"
+            },
+            {
+              "size": "48898310",
+              "checksum": "SHA-256:c9c46c253ef60d588720c592db9403aa720f4dd9917e689fdffe16a6aeff4a1f",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "avrocd-tools-1.5.5-aarch64-linux-gnu.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-aarch64-linux-gnu.tar.gz"
+            },
+            {
+              "size": "39573795",
+              "checksum": "SHA-256:b2299883911d096e8153027a46f2318697837cdee604371e6eb00c49b5473092",
+              "host": "x86_64-apple-darwin",
+              "archiveFileName": "avrocd-tools-1.5.5-x86_64-apple-darwin.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-x86_64-apple-darwin.tar.gz"
+            },
+            {
+              "size": "49400153",
+              "checksum": "SHA-256:752f7badfa119f1a9893b5b09bd30e48141df5d7d7e44e8a7f78643d6a592ad9",
+              "host": "x86_64-linux-gnu",
+              "archiveFileName": "avrocd-tools-1.5.5-x86_64-linux-gnu.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-x86_64-linux-gnu.tar.gz"
+            },
+            {
+              "size": "1274",
+              "checksum": "SHA-256:48f349322ee9f8822de94fef0d37a8ba4fcdf38ce05375a13f3c7826ded93b77",
+              "host": "i686-linux-gnu",
+              "archiveFileName": "avrocd-tools-1.5.5-i686-linux-gnu.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-i686-linux-gnu.tar.gz"
+            },
+            {
+              "size": "30507505",
+              "checksum": "SHA-256:81d4201cc41c5a953c146f86c233f9fe73847ebe6767048d124f6e3461037f51",
+              "host": "x86_64-mingw32",
+              "archiveFileName": "avrocd-tools-1.5.5-x86_64-mingw32.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-x86_64-mingw32.tar.gz"
+            },
+            {
+              "size": "38400357",
+              "checksum": "SHA-256:a68cd8fcb11e99b84c8e4c1c608000f121dd0c8a712671cfa8165a26cf4b5c4a",
+              "host": "arm64-apple-darwin",
+              "archiveFileName": "avrocd-tools-1.5.5-arm64-apple-darwin.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-arm64-apple-darwin.tar.gz"
+            },
+            {
+              "size": "28231958",
+              "checksum": "SHA-256:eeaff24bd7584cee897b7c1dd0bd46e04fae240076ad723c813badf391429f53",
+              "host": "i686-mingw32",
+              "archiveFileName": "avrocd-tools-1.5.5-i686-mingw32.tar.gz",
+              "url": "https://github.com/felias-fogg/PyAvrOCD/releases/download/v1.5.5/avrocd-tools-1.5.5-i686-mingw32.tar.gz"
             }
           ]
         }
