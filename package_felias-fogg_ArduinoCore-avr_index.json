@@ -482,14 +482,14 @@
           ]
         },
         {
-          "name": "Arduino AVR Boards",
+          "name": "Arduino AVR Boards (Debug enabled)",
           "architecture": "avr",
-          "version": "1.11.0-pre1",
+          "version": "1.11.0-pre2",
           "category": "Contributed",
-          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.11.0-pre1.tar.bz2",
-          "archiveFileName": "ArduinoCore-avr-1.11.0-pre1.tar.bz2",
-          "checksum": "SHA-256:7665dded5189bf19be7064d963480c3779ab14fdb4a74a624e2a6ccd7d283845",
-          "size": "7249797",
+          "url": "https://felias-fogg.github.io/ArduinoCore-avr/ArduinoCore-avr-1.11.0-pre2.tar.bz2",
+          "archiveFileName": "ArduinoCore-avr-1.11.0-pre2.tar.bz2",
+          "checksum": "SHA-256:692fdfdac549594aee77f097a529c04dd679984f98dc18c2c3da940a29aeab4c",
+          "size": "7250690",
           "help": {
             "online": "https://pyavrocd.io"
           },
