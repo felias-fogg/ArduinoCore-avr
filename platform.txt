@@ -14,7 +14,7 @@ version=1.11.0-pre3
 # Optimization flags for debugging
 compiler.optimization_flags=-Os -ggdb3  -DNDEBUG -flto 
 compiler.optimization_flags.release=-Os -ggdb3 -DNDEBUG -flto 
-compiler.optimization_flags.debug=-Og -ggdb3 -DDEBUG -flto
+compiler.optimization_flags.debug=-Og -ggdb3 -DDEBUG
 
 # Warnings
 compiler.warning_flags=-w
@@ -151,13 +151,10 @@ build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER=
 recipe.hooks.prebuild.1.pattern=/bin/bash "{runtime.platform.path}/scripts/pragma.sh" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" debug_flags
 recipe.hooks.prebuild.2.pattern=/bin/bash "{runtime.platform.path}/scripts/pragma.sh" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" release_flags
 recipe.hooks.prebuild.3.pattern=/bin/bash "{runtime.platform.path}/scripts/pragma.sh" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" cpp_flags
-recipe.hooks.prebuild.1.pattern.windows="{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" debug_flags
-recipe.hooks.prebuild.2.pattern.windows="{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" release_flags
-recipe.hooks.prebuild.3.pattern.windows="{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" cpp_flags
+recipe.hooks.prebuild.1.pattern.windows=cmd /C call "{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" debug_flags
+recipe.hooks.prebuild.2.pattern.windows=cmd /C call "{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" release_flags
+recipe.hooks.prebuild.3.pattern.windows=cmd /C call "{runtime.platform.path}\scripts\pragma.bat" "{compiler.path}{compiler.cpp.cmd}" "{build.source.path}" "{build.path}" "{build.project_name}" cpp_flags
 
-# Generating launch.json file
-recipe.hooks.sketch.prebuild.1.pattern=/bin/bash "{runtime.platform.path}/scripts/launch.sh" "{build.source.path}" "{build.mcu}" "{build.path}/{build.project_name}.elf" "{runtime.tools.avrocd-tools.path}" "{runtime.tools.avr-gcc.path}" "{build.f_cpu}" "monitor debugwire enable" ""
-recipe.hooks.sketch.prebuild.1.pattern.windows="{runtime.platform.path}\scripts\launch.bat" "{build.source.path}" "{build.mcu}" "{build.path}\{build.project_name}.elf" "{runtime.tools.avrocd-tools.path}" "{runtime.tools.avr-gcc.path}" "{build.f_cpu}" "monitor debugwire enable" ""
 
 # Debugger configuration (general options)
 # ----------------------------------------
@@ -172,16 +169,17 @@ debug.server.openocd.script=nix
 debug.cortex-debug.custom.gdbPath={debug.toolchain.path}/avr-gdb
 debug.cortex-debug.custom.overrideGDBServerStartedRegex=Listening on port \d+ for gdb connection
 debug.cortex-debug.custom.objdumpPath={runtime.tools.avr-gcc.path}/bin/avr-objdump
-debug.cortex-debug.custom.serverArgs.0=-s
-debug.cortex-debug.custom.serverArgs.1=nop
-debug.cortex-debug.custom.serverArgs.2=--device
-debug.cortex-debug.custom.serverArgs.3={build.mcu}
-debug.cortex-debug.custom.serverArgs.4=--manage
-debug.cortex-debug.custom.serverArgs.5=all
-debug.cortex-debug.custom.serverArgs.6=--F_CPU
-debug.cortex-debug.custom.serverArgs.7={build.f_cpu}
-debug.cortex-debug.custom.serverArgs.8=--prog-clock
-debug.cortex-debug.custom.serverArgs.9=2000
+debug.cortex-debug.custom.serverArgs.00=-s
+debug.cortex-debug.custom.serverArgs.01=nop
+debug.cortex-debug.custom.serverArgs.02=--device
+debug.cortex-debug.custom.serverArgs.03={build.mcu}
+debug.cortex-debug.custom.serverArgs.04=--manage
+debug.cortex-debug.custom.serverArgs.05=all
+debug.cortex-debug.custom.serverArgs.06=--F_CPU
+debug.cortex-debug.custom.serverArgs.07={build.f_cpu}
+debug.cortex-debug.custom.serverArgs.08=--prog-clock
+debug.cortex-debug.custom.serverArgs.09=2000
+debug.cortex-debug.custom.serverArgs.10=--once
 debug.cortex-debug.custom.preLaunchCommands.0=monitor debugwire enable
 debug.cortex-debug.custom.runToEntryPoint=main
 debug.svd_file={debug.toolchain.path}/pyavrocd-util/svd/{build.mcu}.svd
